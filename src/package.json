@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "api": "dotnet run --project Notes.Api/Notes.Api.csproj --launch-profile https",
+    "web": "cd Notes.Web && ng serve",
+    "dev": "concurrently \"npm run api\" \"npm run web\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

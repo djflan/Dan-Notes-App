@@ -29,9 +29,9 @@ export class NotesComponent implements OnInit {
     const trimmed = this.newContent.trim();
     if (!trimmed) return;
 
-    this.notesService.addNote(trimmed).subscribe(() => {
+    this.notesService.addNote(trimmed).subscribe((created: Note) => {
       this.newContent = '';
-      this.loadNotes();
+      this.notes = [...this.notes, created];
     });
   }
 }

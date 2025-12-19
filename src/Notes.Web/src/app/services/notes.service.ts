@@ -19,7 +19,7 @@ export class NotesService {
     return this.http.get<Note[]>(this.apiUrl);
   }
 
-  addNote(content: string): Observable<void> {
-    return this.http.post<void>(this.apiUrl, { id:0, content });
+  addNote(content: string): Observable<Note> {
+    return this.http.post<Note>(this.apiUrl, { id:0, content });
   }
 }

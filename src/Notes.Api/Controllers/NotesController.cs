@@ -16,14 +16,15 @@ public class NotesController : Controller
     public IEnumerable<Note> Get() => Notes;
 
     [HttpPost]
-    public IActionResult Add(Note note)
+    public ActionResult<Note> Add(Note note)
     {
         // Generate the next id
         var nextId = Notes.Max(n => n.Id) + 1;
 
         // Mutate the incoming note by creating a new instance with the new id
-        Notes.Add(note with { Id = nextId });
+        Note item = note with { Id = nextId };
+        Notes.Add(item);
 
-        return Ok();
+        return Ok(item);
     }
 }
