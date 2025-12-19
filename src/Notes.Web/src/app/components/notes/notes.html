@@ -6,5 +6,11 @@
   </li>
 </ul>
 
-<input [(ngModel)]="newContent" placeholder="New note" />
-<button (click)="addNote(newContent)">Add</button>
+<form (ngSubmit)="addNote()" autocomplete="off">
+  <input
+    name="noteText"
+    [(ngModel)]="newContent"
+    placeholder="New note"
+  />
+  <button type="submit">Add</button>
+</form>

@@ -25,8 +25,11 @@ export class NotesComponent implements OnInit {
     });
   }
 
-  addNote(content: string): void {
-    this.notesService.addNote(content.trim()).subscribe(() => {
+  addNote(): void {
+    const trimmed = this.newContent.trim();
+    if (!trimmed) return;
+
+    this.notesService.addNote(trimmed).subscribe(() => {
       this.newContent = '';
       this.loadNotes();
     });
