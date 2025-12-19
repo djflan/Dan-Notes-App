@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "Notes.Api.Controllers.NotesController",
+    "Method": "Get",
+    "RelativePath": "api/Notes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Note, Notes.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Notes.Api.Controllers.NotesController",
+    "Method": "Add",
+    "RelativePath": "api/Notes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "note",
+        "Type": "Note",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

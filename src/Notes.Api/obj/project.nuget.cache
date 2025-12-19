@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fIdBhjnpmo0=",
+  "success": true,
+  "projectFilePath": "C:\\Git\\Personal\\Dan-Notes-App\\src\\Notes.Api\\Notes.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DFlanigan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.1\\microsoft.aspnetcore.openapi.10.0.1.nupkg.sha512",
+    "C:\\Users\\DFlanigan\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
