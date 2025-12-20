@@ -1,16 +1,18 @@
 <h2>Notes</h2>
 
 <ul>
-  <li *ngFor="let note of notes">
+  <li *ngFor="let note of notes; trackBy: trackById">
     {{ note.content }}
   </li>
 </ul>
 
 <form (ngSubmit)="addNote()" autocomplete="off">
   <input
-    name="noteText"
-    [(ngModel)]="newContent"
-    placeholder="New note"
-  />
-  <button type="submit">Add</button>
+  name="noteText"
+  [(ngModel)]="newContent"
+  (ngModelChange)="onTextChanged($event)"
+  placeholder="New note"
+/>
+<button type="submit">Add</button>
+
 </form>

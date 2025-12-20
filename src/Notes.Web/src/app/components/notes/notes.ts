@@ -19,6 +19,14 @@ export class NotesComponent implements OnInit {
     this.loadNotes();
   }
 
+  onTextChanged(value: string): void {
+  console.log('ngModelChange:', value);
+}
+
+  trackById(_: number, note: { id: number }) {
+    return note.id;
+  }
+
   loadNotes(): void {
     this.notesService.getNotes().subscribe((notes) => {
       this.notes = notes;
